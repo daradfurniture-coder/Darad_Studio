@@ -11,10 +11,33 @@ export default function Contact() {
   })
   const [submitted, setSubmitted] = useState(false)
 
+  const projectTypeLabels: Record<string, string> = {
+    furniture: 'Custom Furniture',
+    cabinetry: 'Kitchen Cabinetry',
+    restoration: 'Restoration',
+    'live-edge': 'Live Edge Piece',
+    other: 'Other',
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    const lines = [
+      "Hello Darad Workshop! I'd like to start a project.",
+      '',
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      formData.phone ? `Phone: ${formData.phone}` : '',
+      formData.projectType
+        ? `Project type: ${projectTypeLabels[formData.projectType] ?? formData.projectType}`
+        : '',
+      '',
+      `Details: ${formData.message}`,
+    ].filter((line, i) => line !== '' || i === 1 || i === 6)
+    const url = `https://wa.me/254745948866?text=${encodeURIComponent(lines.join('\n'))}`
+    window.open(url, '_blank', 'noopener')
     setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+    setTimeout(() => setSubmitted(false), 5000)
+    setFormData({ name: '', email: '', phone: '', projectType: '', message: '' })
   }
 
   const contactInfo = [
@@ -93,10 +116,10 @@ export default function Contact() {
                     <Send className="w-8 h-8 text-[#F5F0E8]" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#3D2314] mb-2">
-                    Message Sent!
+                    Opening WhatsApp...
                   </h3>
                   <p className="text-[#5C3D2E]">
-                    We will get back to you within 24 hours.
+                    Your message is pre-filled — just press send. We will get back to you within 24 hours.
                   </p>
                 </div>
               ) : (
@@ -191,7 +214,7 @@ export default function Contact() {
                     className="w-full py-4 bg-[#5C3D2E] text-[#F5F0E8] font-semibold rounded-md hover:bg-[#3D2314] transition-colors flex items-center justify-center gap-2"
                   >
                     <Send className="w-5 h-5" />
-                    Send Message
+                    Send via WhatsApp
                   </button>
                 </>
               )}
