@@ -1,4 +1,5 @@
 import { Award, Users, TreePine, Heart } from 'lucide-react'
+import { scrollToSection } from '../lib/scroll'
 
 export default function About() {
   const stats = [
@@ -62,6 +63,7 @@ export default function About() {
             <div className="reveal reveal-delay-2 mt-8">
               <a
                 href="#portfolio"
+                onClick={(e) => scrollToSection(e, '#portfolio')}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#5C3D2E] text-[#F5F0E8] font-medium rounded-md hover:bg-[#3D2314] transition-colors"
               >
                 Explore Our Craft

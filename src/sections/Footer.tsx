@@ -1,4 +1,5 @@
 import { TreePine, Instagram, Facebook, Twitter } from 'lucide-react'
+import { scrollToSection } from '../lib/scroll'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#home" className="flex items-center gap-2 mb-4">
+            <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="flex items-center gap-2 mb-4">
               <TreePine className="w-7 h-7 text-[#D4A574]" />
               <span className="text-xl font-semibold">Darad Studio</span>
             </a>
@@ -21,6 +22,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="w-10 h-10 bg-[#F5F0E8]/10 rounded-lg flex items-center justify-center hover:bg-[#D4A574] hover:text-[#3D2314] transition-all"
                 >
                   <Icon className="w-5 h-5" />
@@ -37,6 +39,7 @@ export default function Footer() {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
+                    onClick={(e) => scrollToSection(e, `#${link.toLowerCase()}`)}
                     className="text-[#F5F0E8]/60 hover:text-[#F5F0E8] transition-colors text-sm"
                   >
                     {link}
@@ -60,6 +63,7 @@ export default function Footer() {
                 <li key={service}>
                   <a
                     href="#services"
+                    onClick={(e) => scrollToSection(e, '#services')}
                     className="text-[#F5F0E8]/60 hover:text-[#F5F0E8] transition-colors text-sm"
                   >
                     {service}
@@ -99,10 +103,10 @@ export default function Footer() {
             &copy; {currentYear} Darad Studio. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-[#F5F0E8]/40 hover:text-[#F5F0E8]/60 text-sm transition-colors">
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-[#F5F0E8]/40 hover:text-[#F5F0E8]/60 text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-[#F5F0E8]/40 hover:text-[#F5F0E8]/60 text-sm transition-colors">
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-[#F5F0E8]/40 hover:text-[#F5F0E8]/60 text-sm transition-colors">
               Terms of Service
             </a>
           </div>

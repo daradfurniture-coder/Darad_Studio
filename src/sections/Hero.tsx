@@ -1,4 +1,5 @@
 import { ArrowDown, Hammer } from 'lucide-react'
+import { scrollToSection } from '../lib/scroll'
 
 export default function Hero() {
   return (
@@ -41,12 +42,14 @@ export default function Hero() {
         <div className="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#portfolio"
+            onClick={(e) => scrollToSection(e, '#portfolio')}
             className="px-8 py-4 bg-[#D4A574] text-[#3D2314] font-semibold rounded-md hover:bg-[#C17817] transition-colors"
           >
             View Our Work
           </a>
           <a
             href="#contact"
+            onClick={(e) => scrollToSection(e, '#contact')}
             className="px-8 py-4 bg-transparent text-[#F5F0E8] font-semibold rounded-md border-2 border-[#F5F0E8]/30 hover:border-[#F5F0E8]/60 hover:bg-[#F5F0E8]/5 transition-all"
           >
             Start a Project
@@ -57,6 +60,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <a
         href="#about"
+        onClick={(e) => scrollToSection(e, '#about')}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#F5F0E8]/60 hover:text-[#F5F0E8] transition-colors animate-bounce"
       >
         <ArrowDown className="w-6 h-6" />
