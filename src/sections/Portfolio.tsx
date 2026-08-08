@@ -4,36 +4,38 @@ import { X, ZoomIn } from 'lucide-react'
 export default function Portfolio() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
+  const img = (name: string) => `${import.meta.env.BASE_URL}images/portfolio/${name}`
+
   const projects = [
     {
-      title: 'Walnut Dining Table',
+      title: 'Mandala Art Curved Table (9×4 ft)',
       category: 'Furniture',
-      image: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1000&auto=format&fit=crop',
+      image: img('mandala-table.jpg'),
     },
     {
-      title: 'Oak Kitchen Island',
+      title: 'Modern Kitchen Drawers',
       category: 'Cabinetry',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1000&auto=format&fit=crop',
+      image: img('kitchen-drawers.jpg'),
     },
     {
-      title: 'Cherry Bookshelf',
-      category: 'Furniture',
-      image: 'https://images.unsplash.com/photo-1594620302200-9a762244a156?q=80&w=1000&auto=format&fit=crop',
+      title: 'Mandala Swahili Headboard',
+      category: 'Carvings',
+      image: img('mandala-headboard.jpg'),
     },
     {
-      title: 'Live Edge Coffee Table',
-      category: 'Live Edge',
-      image: 'https://images.unsplash.com/photo-1611486212557-88be5ff6f941?q=80&w=1000&auto=format&fit=crop',
+      title: 'Modern Curved Bed',
+      category: 'Beds',
+      image: img('curved-bed.jpg'),
     },
     {
-      title: 'Reclaimed Barn Door',
-      category: 'Doors',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1000&auto=format&fit=crop',
+      title: 'Swahili Bench Day Bed (3×6 ft)',
+      category: 'Beds',
+      image: img('swahili-bench.jpg'),
     },
     {
-      title: 'Maple Rocking Chair',
-      category: 'Furniture',
-      image: 'https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1000&auto=format&fit=crop',
+      title: 'Hardwood Driveway Gate',
+      category: 'Gates',
+      image: img('wooden-gate.jpg'),
     },
   ]
 
