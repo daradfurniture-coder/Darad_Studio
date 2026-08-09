@@ -40,7 +40,7 @@ export default function Navbar() {
               className={`text-xl font-semibold tracking-tight transition-colors ${scrolled ? 'text-[#3D2314]' : 'text-[#F5F0E8]'
                 }`}
             >
-              Darad Workshop
+              Darad Studio
             </span>
           </a>
 

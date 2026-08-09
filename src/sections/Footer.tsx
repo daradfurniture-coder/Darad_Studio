@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-xl font-semibold">Darad Studio</span>
             </a>
             <p className="text-[#F5F0E8]/60 text-sm leading-relaxed">
-              Handcrafted furniture and woodwork since 1987. Where every grain tells a story.
+              Handcrafted furniture and woodwork since 2010. Where every grain tells a story.
             </p>
             <div className="flex gap-3 mt-6">
               {[Instagram, Facebook, Twitter].map((Icon, i) => (

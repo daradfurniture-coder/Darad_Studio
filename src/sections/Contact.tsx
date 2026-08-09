@@ -22,7 +22,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const lines = [
-      "Hello Darad Workshop! I'd like to start a project.",
+      "Hello Darad Studio! I'd like to start a project.",
       '',
       `Name: ${formData.name}`,
       `Email: ${formData.email}`,
@@ -94,13 +94,16 @@ export default function Contact() {
               </div>
             ))}
 
-            {/* Map placeholder */}
-            <div className="reveal mt-8 rounded-lg overflow-hidden border border-[#E8DDD0] h-48 bg-[#E8DDD0] flex items-center justify-center">
-              <div className="text-center text-[#5C3D2E]">
-                <MapPin className="w-8 h-8 mx-auto mb-2 text-[#C17817]" />
-                <p className="font-medium">Diani Beach Road</p>
-                <p className="text-sm"> ,Opposite Psalm Beach Hospital</p>
-              </div>
+            {/* Map */}
+            <div className="reveal mt-8 rounded-lg overflow-hidden border border-[#E8DDD0] h-64">
+              <iframe
+                title="Darad Studio location — Diani Beach Road, opposite Psalm Beach Hospital"
+                src="https://maps.google.com/maps?q=Psalm%20Beach%20Hospital%2C%20Diani%20Beach%20Road%2C%20Diani%2C%20Kenya&z=15&output=embed"
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
 

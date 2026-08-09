@@ -8,6 +8,7 @@ import Process from '../sections/Process'
 import Testimonials from '../sections/Testimonials'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
+import WhatsAppButton from '../components/WhatsAppButton'
 
 export default function Home() {
   useScrollAnimation()
@@ -23,6 +24,7 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }
