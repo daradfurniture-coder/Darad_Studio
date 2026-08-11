@@ -3,21 +3,21 @@ import { Star, Quote } from 'lucide-react'
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Margaret Chen',
+      name: 'Van Wilson',
       role: 'Homeowner',
-      text: 'The walnut dining table Darad Studio crafted for us is the centerpiece of our home. The grain is stunning, and the craftsmanship is impeccable. Worth every penny.',
+      text: 'The Darad Studio crafted for us two main doors for our house. The grain is stunning, and the craftsmanship is impeccable. Worth every penny.',
       rating: 5,
     },
     {
-      name: 'David Okafor',
+      name: 'Maureen Wanjiku',
       role: 'Interior Designer',
       text: 'I have commissioned Darad Studio for multiple client projects. Their attention to detail and ability to translate design concepts into reality is unmatched.',
       rating: 5,
     },
     {
-      name: 'Sarah Lindqvist',
+      name: 'Feisal - Galu Square ',
       role: 'Restaurant Owner',
-      text: 'They built all the tables and bar seating for our restaurant. Two years in and they still look brand new. The live edge bar is a customer favorite.',
+      text: 'They built a bar area for our restaurant. 8 months in and they still look brand new. A customer favorite in the restaurant.',
       rating: 5,
     },
   ]
